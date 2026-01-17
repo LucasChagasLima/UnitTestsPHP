@@ -1,0 +1,28 @@
+# Dependências do Composer
+/vendor/
+
+# Arquivos de Ambiente (Segurança)
+.env
+.env.backup
+.env.local
+
+# PHPUnit - Cache e Relatórios de Cobertura
+.phpunit.result.cache
+.phpunit.cache/
+/coverage/
+/build/
+/reports/
+
+# Arquivos de Log e Temporários
+*.log
+/runtime/
+
+# IDEs e Sistema Operacional
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Se for criar um pacote (library), ignore o lock.
+# Se for uma aplicação final, NÃO ignore o composer.lock.
+# composer.lock

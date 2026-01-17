@@ -1,0 +1,19 @@
+{
+    "name": "lucas/unit-tests-php",
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/",
+            "core\\": "core/"
+        }
+        
+    },
+    "authors": [
+        {
+            "name": "Lucas Lima"
+            
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^9.6"
+    }
+}

@@ -4,13 +4,29 @@
          bootstrap="vendor/autoload.php"
          colors="true"
          testdox="true"
->
-    
-
+         stopOnFailure="false">
     
     <php>
-        <env name="APP_ENV" value="testing"/>
-        <ini name="display_errors" value="1" />
-        <ini name="error_reporting" value="-1" />
+        <env name="DB_HOST" value="localhost" />
+        <env name="DB_NAME" value="lumen" />
+        <env name="DB_USERNAME" value="root" />
+        <env name="DB_PASSWORD" value="" />
     </php>
+
+    <testsuites>
+        <testsuite name="app">
+            <directory>tests/unit/app/</directory>
+        </testsuite>
+
+        <testsuite name="core">
+            <directory>tests/unit/core/</directory>
+        </testsuite>
+    </testsuites>
+
+    <coverage processUncoveredFiles="true">
+        <include>
+            <directory suffix=".php">./app</directory>
+            <directory suffix=".php">./core</directory>
+        </include>
+    </coverage>
 </phpunit>
